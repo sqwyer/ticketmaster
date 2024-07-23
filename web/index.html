@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticketmaster</title>
+
+  <style>
+    .num {
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .selected {
+      border: 1px solid orange;
+    }
+
+    button {
+      border: 1px solid #ddd;
+      background: #fafafa;
+      border-radius: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      font-size: .6em;
+    }
+
+    button:hover {
+      background: #eee;
+    }
+
+    #genticket {
+      font-weight: bold;
+      background: #eee;
+    }
+
+    #genticket:hover {
+      background: #dfdfdf;
+    }
+  </style>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #fafafa;">
+  <main style="border: 1px solid #ddd; background: #fff; padding: 16px; font-family: sans-serif; font-size: 1.5rem; border-radius: 8px;">
+    <div style="display: flex; flex-direction: row; gap: 8px;">
+      <div id="currentTicket"></div>
+      <div id="ticketList" style="border-left: 1px solid #ddd; padding-left: 8px; padding-right: 8px; gap: 8px; display: flex; flex-direction: column;"></div>
+    </div>
+    <div style="display: flex; flex-direction: row; min-height: 30.5px;" id="allCalls"></div>
+    <div style="display: flex; flex-direction: column; gap: 4px; width: 264px">
+      <div style="display: flex; flex-direction: row; gap: 4px">
+        <input id="callInput" style="flex: 1" placeholder="00" />
+        <button onclick="callNum(Number(document.getElementById('callInput').value))"">Call Number</button>
+      </div>
+      <button onclick="clearTicket()" style="background: tomato; border: 1px solid indianred;color: white">Clear Ticket</button>
+    </div>
+  </main>
+
+
+  <script src="./static/index.js"></script>
+</body>
+</html>
