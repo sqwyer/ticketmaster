@@ -39,7 +39,7 @@ app.get("/api/generate", (req, res) => {
   const rows = generateTicket()
   const d = new Date();
   const hr = d.getHours();
-  const min = d.getHours();
+  const min = d.getMinutes();
   const sec = d.getSeconds()
 
   const ticket = {
